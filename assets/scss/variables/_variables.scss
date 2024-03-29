@@ -1,0 +1,112 @@
+$white: #fff !default;
+$gray-50: #f6f6f6 !default;
+$gray-100: #babfc7 !default; /* $gray-lightest */
+$gray-200: #ededed !default; /*  $gray-lighter */
+$gray-300: #dae1e7 !default; /*  $gray-light */
+$gray-400: #636363 !default;
+$gray-500: #adb5bd !default;
+$gray-600: #b8c2cc !default; /*$gray*/
+$gray-700: #4e5154 !default;
+$gray-800: #1e1e1e !default; /*$gray-dark*/
+$gray-900: #2a2e30 !default;
+$black: #22292f !default; /*  231f48 22292f*/
+$purple: #7367f0 !default; /* $primary*/
+$green: #28c76f !default; /* $success*/
+$blue: #00cfe8 !default; /* $info*/
+$orange: #ff9f43 !default; /* $warning*/
+$red: #ea5455 !default; /* $danger*/
+$primary: $purple !default;
+$secondary: #82868b !default;
+$info: $blue !default;
+$warning: $orange !default;
+$light: $gray-50 !default;
+$dark: #4b4b4b !default;
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1440px
+) !default;
+
+$container-max-widths: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1440px
+) !default;
+$spacer: 1rem !default;
+$spacers: () !default;
+
+$spacers: map-merge(
+  (
+    0: 0,
+    25: (
+      $spacer * 0.25
+    ),
+    50: (
+      $spacer * 0.5
+    ),
+    75: (
+      $spacer * 0.75
+    ),
+    1: (
+      $spacer
+    ),
+    2: (
+      $spacer * 1.5
+    ),
+    3: (
+      $spacer * 3
+    ),
+    4: (
+      $spacer * 3.5
+    ),
+    5: (
+      $spacer * 4
+    )
+  ),
+  $spacers
+);
+
+$body-bg: #f8f8f8 !default;
+$body-color: #6e6b7b !default;
+$link-color: $primary !default;
+$link-hover-color: darken($link-color, 5%) !default;
+$link-hover-decoration: none !default;
+$grid-gutter-width: 2rem !default;
+$line-height-lg: 1.25 !default;
+$line-height-sm: 1 !default;
+$border-width: 1px !default;
+$border-color: #ebe9f1 !default;
+$border-radius: 0.357rem !default;
+$border-radius-lg: 0.6rem !default;
+$border-radius-sm: 0.25rem !default;
+$box-shadow: 0 4px 24px 0 rgba($black, 0.1) !default;
+$font-family-sans-serif: 'Montserrat', Helvetica, Arial, serif !default;
+$font-family-monospace: 'Montserrat', Helvetica, Arial, serif !default;
+$font-size-base: 1rem !default;
+$font-size-lg: ceil($font-size-base * 1.25) !default;
+$font-size-sm: ceil($font-size-base * 0.85) !default;
+$font-weight-normal: 400 !default;
+$font-weight-bold: 500 !default;
+$font-weight-bolder: 600 !default;
+$line-height-base: 1.45 !default;
+$h1-font-size: $font-size-base * 2 !default;
+$h2-font-size: $font-size-base * 1.714 !default;
+$h3-font-size: $font-size-base * 1.5 !default;
+$h4-font-size: $font-size-base * 1.286 !default;
+$h5-font-size: $font-size-base * 1.07 !default;
+$headings-font-family: inherit !default;
+$headings-color: #5e5873 !default;
+$display1-weight: $font-weight-normal !default;
+$display2-weight: $font-weight-normal !default;
+$display3-weight: $font-weight-normal !default;
+$display4-weight: $font-weight-normal !default;
+$lead-font-size: $font-size-base * 1.14 !default;
+$lead-font-weight: $font-weight-normal !default;
+$small-font-size: 0.857rem !default;
+$text-muted: #b9b9c3 !default;

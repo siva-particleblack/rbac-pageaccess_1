@@ -1,0 +1,27 @@
+//  ================================================================================================
+//  ? TIP:  It is recommended to use this file for overriding component variables.
+//  ================================================================================================
+
+// Custom base primary colors
+$base-font-size: 12px;
+$base-font-family: 'Roboto', sans-serif !important;
+$base-color: #2c2863;
+$base-hover-color: #3e397e;
+$base-focus-color: #3e397e;
+
+$base-cancel: #212121;
+$base-bg-light: #431e8d12;
+
+$danger-color: #ff6252;
+$warning-color: #f0a141;
+$success-color: #2ecd53;
+
+// Custom base Secondary colors
+
+@media (min-width: 1600px) {
+  $base-font-size: 12px;
+}
+
+@media (max-width: 1600px) {
+  $base-font-size: 13px;
+}

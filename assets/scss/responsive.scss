@@ -1,0 +1,66 @@
+/* You can add global styles to this file, and also import other style files */
+@import './variables/_variables-components.scss';
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+
+@media screen and (min-width: 1024px) {
+  .intakesteps {
+    width: 70%;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .uploadModal.ocrdocumentModal .modal-dialog {
+    max-width: 900px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .p-component-overlay {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 990px) {
+  .modal .modal-dialog {
+    max-width: 90%;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 990px) and (orientation: portrait) {
+  .modal.changepassword .modal-dialog {
+    max-width: 60%;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar.navbar-light {
+    .navbar-brand {
+      max-width: 100%;
+      display: flex;
+    }
+
+    #dashboardItems {
+      .navbar-nav {
+        display: flex;
+
+        .overllmenu .dropdown-menu {
+          position: fixed;
+          top: 3.8em;
+          left: auto;
+          right: 10px;
+        }
+      }
+    }
+  }
+
+  .schedul {
+    .schedul-main {
+      .fc .fc-toolbar {
+        flex-direction: column-reverse;
+        .fc-toolbar-chunk:nth-child(2) {
+          padding: 10px 0px;
+        }
+      }
+    }
+  }
+}
