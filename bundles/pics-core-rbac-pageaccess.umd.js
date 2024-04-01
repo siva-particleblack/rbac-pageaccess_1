@@ -3187,7 +3187,7 @@
                 var filterdPageConfigArray = [];
                 var _loop_1 = function (i) {
                     var filterdPageConfig = pageConfig.filter(function (key) { var _a; return ((_a = key === null || key === void 0 ? void 0 : key.page) === null || _a === void 0 ? void 0 : _a.id) === pId[i]; });
-                    filterdPageConfigArray.push(filterdPageConfig);
+                    filterdPageConfigArray.push(filterdPageConfig[0]);
                 };
                 for (var i = 0; i < pId.length; i++) {
                     _loop_1(i);

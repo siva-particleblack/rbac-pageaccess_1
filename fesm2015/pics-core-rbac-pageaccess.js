@@ -2446,7 +2446,7 @@ class PageaccessComponent {
             const filterdPageConfigArray = [];
             for (let i = 0; i < pId.length; i++) {
                 const filterdPageConfig = pageConfig.filter(key => { var _a; return ((_a = key === null || key === void 0 ? void 0 : key.page) === null || _a === void 0 ? void 0 : _a.id) === pId[i]; });
-                filterdPageConfigArray.push(filterdPageConfig);
+                filterdPageConfigArray.push(filterdPageConfig[0]);
             }
             for (let i = 0; i < pId.length; i++) {
                 let setAccess = '';
