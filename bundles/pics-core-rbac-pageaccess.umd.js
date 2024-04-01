@@ -3184,9 +3184,13 @@
                 if (formValue.pageLevelData.length) {
                     existSelectedPageId = formValue.pageLevelData.map(function (id) { return id.id; });
                 }
-                // for(let i = 0; i< pageConfig.length; i++)
-                var filterdPageConfig = pageConfig.filter(function (key) { var _a, _b; return ((_b = (_a = key === null || key === void 0 ? void 0 : key.page) === null || _a === void 0 ? void 0 : _a.activeVersion) === null || _b === void 0 ? void 0 : _b.id) === pId; });
                 var _loop_1 = function (i) {
+                    var filterdPageConfig = pageConfig.filter(function (key) { var _a, _b; return ((_b = (_a = key === null || key === void 0 ? void 0 : key.page) === null || _a === void 0 ? void 0 : _a.activeVersion) === null || _b === void 0 ? void 0 : _b.id) === pId[i]; });
+                };
+                for (var i = 0; i < pId.pId; i++) {
+                    _loop_1(i);
+                }
+                var _loop_2 = function (i) {
                     var setAccess = '';
                     setAccess = this_1.pageAccessService.getPageAccess(pageConfig[i]);
                     var pageName = this_1.pageData.filter(function (key) { return key.id === pId[i]; });
@@ -3199,7 +3203,7 @@
                 };
                 var this_1 = this;
                 for (var i = 0; i < pId.length; i++) {
-                    _loop_1(i);
+                    _loop_2(i);
                 }
             }
             this.forActionClick(action, pId, accessArray);
@@ -3631,7 +3635,7 @@
                 f.controls = [];
                 var p = this.rbacForm.controls['pageLevelData'];
                 p.controls = [];
-                var _loop_2 = function (j) {
+                var _loop_3 = function (j) {
                     var pageConfig = this_2.policyGroupData.filter(function (key) { return key.id === policyids[j]; });
                     if (from === 'field') {
                         this_2.editPage = false;
@@ -3648,7 +3652,7 @@
                 };
                 var this_2 = this;
                 for (var j = 0; j < policyids.length; j++) {
-                    _loop_2(j);
+                    _loop_3(j);
                 }
             }
             else {
@@ -3679,7 +3683,7 @@
                 f.controls = [];
                 var p = this.rbacForm.controls['pageLevelData'];
                 p.controls = [];
-                var _loop_3 = function (j) {
+                var _loop_4 = function (j) {
                     var pageConfig = this_3.roleAddedData.filter(function (key) { return key.id === roleIds[j]; });
                     this_3.getOrgId(pageConfig);
                     if (from === 'field') {
@@ -3698,7 +3702,7 @@
                 var this_3 = this;
                 // loop the role ids
                 for (var j = 0; j < roleIds.length; j++) {
-                    _loop_3(j);
+                    _loop_4(j);
                 }
             }
             else {
@@ -3734,7 +3738,7 @@
                 f.controls = [];
                 var p = this.rbacForm.controls['pageLevelData'];
                 p.controls = [];
-                var _loop_4 = function (j) {
+                var _loop_5 = function (j) {
                     var pageConfig = this_4.userList.filter(function (key) { return key.id === userIds[j]; });
                     if (from === 'field') {
                         this_4.editPage = false;
@@ -3752,7 +3756,7 @@
                 var this_4 = this;
                 // loop the role ids
                 for (var j = 0; j < userIds.length; j++) {
-                    _loop_4(j);
+                    _loop_5(j);
                 }
             }
             else {
