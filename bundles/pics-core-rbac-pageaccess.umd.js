@@ -3194,7 +3194,7 @@
                 }
                 var _loop_2 = function (i) {
                     var setAccess = '';
-                    setAccess = this_1.pageAccessService.getPageAccess(pageConfig[i]);
+                    setAccess = this_1.pageAccessService.getPageAccess(filterdPageConfigArray[i]);
                     var pageName = this_1.pageData.filter(function (key) { return key.id === pId[i]; });
                     if (existSelectedPageId.length) {
                         this_1.getVersionAccessArray(existSelectedPageId, pId, i, accessArray, pageName, setAccess, pageConfig);

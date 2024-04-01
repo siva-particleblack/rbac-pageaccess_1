@@ -2450,7 +2450,7 @@ class PageaccessComponent {
             }
             for (let i = 0; i < pId.length; i++) {
                 let setAccess = '';
-                setAccess = this.pageAccessService.getPageAccess(pageConfig[i]);
+                setAccess = this.pageAccessService.getPageAccess(filterdPageConfigArray[i]);
                 const pageName = this.pageData.filter(key => key.id === pId[i]);
                 if (existSelectedPageId.length) {
                     this.getVersionAccessArray(existSelectedPageId, pId, i, accessArray, pageName, setAccess, pageConfig);
