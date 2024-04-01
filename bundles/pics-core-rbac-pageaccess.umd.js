@@ -3184,6 +3184,8 @@
                 if (formValue.pageLevelData.length) {
                     existSelectedPageId = formValue.pageLevelData.map(function (id) { return id.id; });
                 }
+                // for(let i = 0; i< pageConfig.length; i++)
+                var filterdPageConfig = pageConfig.filter(function (key) { var _a, _b; return ((_b = (_a = key === null || key === void 0 ? void 0 : key.page) === null || _a === void 0 ? void 0 : _a.activeVersion) === null || _b === void 0 ? void 0 : _b.id) === pId; });
                 var _loop_1 = function (i) {
                     var setAccess = '';
                     setAccess = this_1.pageAccessService.getPageAccess(pageConfig[i]);

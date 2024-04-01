@@ -2443,6 +2443,8 @@ class PageaccessComponent {
             if (formValue.pageLevelData.length) {
                 existSelectedPageId = formValue.pageLevelData.map(id => id.id);
             }
+            // for(let i = 0; i< pageConfig.length; i++)
+            const filterdPageConfig = pageConfig.filter(key => { var _a, _b; return ((_b = (_a = key === null || key === void 0 ? void 0 : key.page) === null || _a === void 0 ? void 0 : _a.activeVersion) === null || _b === void 0 ? void 0 : _b.id) === pId; });
             for (let i = 0; i < pId.length; i++) {
                 let setAccess = '';
                 setAccess = this.pageAccessService.getPageAccess(pageConfig[i]);
