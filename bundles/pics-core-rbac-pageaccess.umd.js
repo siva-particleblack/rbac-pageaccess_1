@@ -3185,7 +3185,7 @@
                     existSelectedPageId = formValue.pageLevelData.map(function (id) { return id.id; });
                 }
                 var _loop_1 = function (i) {
-                    var filterdPageConfig = pageConfig.filter(function (key) { var _a, _b; return ((_b = (_a = key === null || key === void 0 ? void 0 : key.page) === null || _a === void 0 ? void 0 : _a.activeVersion) === null || _b === void 0 ? void 0 : _b.id) === pId[i]; });
+                    var filterdPageConfig = pageConfig.filter(function (key) { var _a; return ((_a = key === null || key === void 0 ? void 0 : key.page) === null || _a === void 0 ? void 0 : _a.id) === pId[i]; });
                 };
                 for (var i = 0; i < pId.length; i++) {
                     _loop_1(i);
