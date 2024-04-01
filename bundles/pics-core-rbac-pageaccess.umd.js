@@ -2903,7 +2903,8 @@
                             ishide: a.hide,
                             isread: a.read,
                             isreadwrite: a.readwrite,
-                            conditions: a.conditions
+                            conditions: a.conditions,
+                            page: a.page
                         };
                     });
                     _this.loadPages(uniquePageData, null, pageIDs, pageConfigData, _this.assetList);
