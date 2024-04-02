@@ -79,6 +79,7 @@ export declare class PageaccessComponent implements OnInit {
     enablesave: boolean;
     pagelevelaccesscountdisable: boolean;
     loadPagesDropdown: boolean;
+    showFieldGrid: boolean;
     constructor(injector: Injector, formBuilder: FormBuilder, cdRef: ChangeDetectorRef, _storeservice: DataStoreService, router: Router, alert: AlertService);
     ngOnInit(): void;
     ngOnDestroy(): void;
