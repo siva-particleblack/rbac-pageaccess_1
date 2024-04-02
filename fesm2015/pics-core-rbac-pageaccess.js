@@ -2433,9 +2433,6 @@ class PageaccessComponent {
         const formValue = this.rbacForm.getRawValue();
         const pAccessId = this.rbacForm.get('ppages').value;
         const pId = pAccessId.map(key => key.pageid || key.id);
-        const pageIds = this.rbacForm.get('pageList').value;
-        const id = pageIds.map(key => key.id);
-        let provideAccess = this.rbacForm.get('provideAccess').value;
         // first check exist page config
         if (pageConfig !== null) {
             // check selected value length
@@ -2443,11 +2440,7 @@ class PageaccessComponent {
             if (formValue.pageLevelData.length) {
                 existSelectedPageId = formValue.pageLevelData.map(id => id.id);
             }
-            const filterdPageConfigArray = [];
-            for (let i = 0; i < pId.length; i++) {
-                const filterdPageConfig = pageConfig.filter(key => { var _a; return ((_a = key === null || key === void 0 ? void 0 : key.page) === null || _a === void 0 ? void 0 : _a.id) === pId[i]; });
-                filterdPageConfigArray.push(filterdPageConfig[0]);
-            }
+            const filterdPageConfigArray = pId.map(id => pageConfig.find(key => { var _a; return ((_a = key === null || key === void 0 ? void 0 : key.page) === null || _a === void 0 ? void 0 : _a.id) === id; })).filter(Boolean);
             for (let i = 0; i < pId.length; i++) {
                 let setAccess = '';
                 setAccess = this.pageAccessService.getPageAccess(filterdPageConfigArray[i]);

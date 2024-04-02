@@ -3174,9 +3174,6 @@
             var formValue = this.rbacForm.getRawValue();
             var pAccessId = this.rbacForm.get('ppages').value;
             var pId = pAccessId.map(function (key) { return key.pageid || key.id; });
-            var pageIds = this.rbacForm.get('pageList').value;
-            var id = pageIds.map(function (key) { return key.id; });
-            var provideAccess = this.rbacForm.get('provideAccess').value;
             // first check exist page config
             if (pageConfig !== null) {
                 // check selected value length
@@ -3184,15 +3181,8 @@
                 if (formValue.pageLevelData.length) {
                     existSelectedPageId = formValue.pageLevelData.map(function (id) { return id.id; });
                 }
-                var filterdPageConfigArray = [];
+                var filterdPageConfigArray = pId.map(function (id) { return pageConfig.find(function (key) { var _a; return ((_a = key === null || key === void 0 ? void 0 : key.page) === null || _a === void 0 ? void 0 : _a.id) === id; }); }).filter(Boolean);
                 var _loop_1 = function (i) {
-                    var filterdPageConfig = pageConfig.filter(function (key) { var _a; return ((_a = key === null || key === void 0 ? void 0 : key.page) === null || _a === void 0 ? void 0 : _a.id) === pId[i]; });
-                    filterdPageConfigArray.push(filterdPageConfig[0]);
-                };
-                for (var i = 0; i < pId.length; i++) {
-                    _loop_1(i);
-                }
-                var _loop_2 = function (i) {
                     var setAccess = '';
                     setAccess = this_1.pageAccessService.getPageAccess(filterdPageConfigArray[i]);
                     var pageName = this_1.pageData.filter(function (key) { return key.id === pId[i]; });
@@ -3205,7 +3195,7 @@
                 };
                 var this_1 = this;
                 for (var i = 0; i < pId.length; i++) {
-                    _loop_2(i);
+                    _loop_1(i);
                 }
             }
             this.forActionClick(action, pId, accessArray);
@@ -3637,7 +3627,7 @@
                 f.controls = [];
                 var p = this.rbacForm.controls['pageLevelData'];
                 p.controls = [];
-                var _loop_3 = function (j) {
+                var _loop_2 = function (j) {
                     var pageConfig = this_2.policyGroupData.filter(function (key) { return key.id === policyids[j]; });
                     if (from === 'field') {
                         this_2.editPage = false;
@@ -3654,7 +3644,7 @@
                 };
                 var this_2 = this;
                 for (var j = 0; j < policyids.length; j++) {
-                    _loop_3(j);
+                    _loop_2(j);
                 }
             }
             else {
@@ -3685,7 +3675,7 @@
                 f.controls = [];
                 var p = this.rbacForm.controls['pageLevelData'];
                 p.controls = [];
-                var _loop_4 = function (j) {
+                var _loop_3 = function (j) {
                     var pageConfig = this_3.roleAddedData.filter(function (key) { return key.id === roleIds[j]; });
                     this_3.getOrgId(pageConfig);
                     if (from === 'field') {
@@ -3704,7 +3694,7 @@
                 var this_3 = this;
                 // loop the role ids
                 for (var j = 0; j < roleIds.length; j++) {
-                    _loop_4(j);
+                    _loop_3(j);
                 }
             }
             else {
@@ -3740,7 +3730,7 @@
                 f.controls = [];
                 var p = this.rbacForm.controls['pageLevelData'];
                 p.controls = [];
-                var _loop_5 = function (j) {
+                var _loop_4 = function (j) {
                     var pageConfig = this_4.userList.filter(function (key) { return key.id === userIds[j]; });
                     if (from === 'field') {
                         this_4.editPage = false;
@@ -3758,7 +3748,7 @@
                 var this_4 = this;
                 // loop the role ids
                 for (var j = 0; j < userIds.length; j++) {
-                    _loop_5(j);
+                    _loop_4(j);
                 }
             }
             else {
