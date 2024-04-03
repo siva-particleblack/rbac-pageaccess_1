@@ -25,6 +25,7 @@ export declare class PageaccessComponent implements OnInit {
     subModuleList: any[];
     pageData: any[];
     pagesList: any[];
+    loadedPagesList: any[];
     selectedPageData: any[];
     fData: any[];
     moduleDropdownSettings: {};
@@ -78,7 +79,6 @@ export declare class PageaccessComponent implements OnInit {
     deselectAssetIds: Array<number>;
     enablesave: boolean;
     pagelevelaccesscountdisable: boolean;
-    loadPagesDropdown: boolean;
     showFieldGrid: boolean;
     constructor(injector: Injector, formBuilder: FormBuilder, cdRef: ChangeDetectorRef, _storeservice: DataStoreService, router: Router, alert: AlertService);
     ngOnInit(): void;
